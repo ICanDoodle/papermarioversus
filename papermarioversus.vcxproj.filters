@@ -1,14 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
@@ -16,69 +8,101 @@
     <Filter Include="Resource Files\Shaders">
       <UniqueIdentifier>{d8ae64f7-befc-47f3-848b-739e68757dc0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Battle">
+      <UniqueIdentifier>{22781fdb-bcc0-4dd1-9897-31e25ed94a01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{e7520e0c-e8c6-4722-bd6b-62e0227e2014}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Engine">
+      <UniqueIdentifier>{5f9cb2bd-76e6-4716-80d3-b112eca85820}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Engine\Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source\Engine\Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\Textures">
+      <UniqueIdentifier>{e805d109-0d61-43a8-a74c-7620f6c6a6e0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source\Engine\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="glad.c">
-      <Filter>Source Files</Filter>
+      <Filter>Source\Engine\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Camera.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source\Engine\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Shader.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source\Engine\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="EBO.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source\Engine\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="VBO.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source\Engine\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="VAO.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source\Engine\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Texture.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source\Engine\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="miniaudio.c">
-      <Filter>Source Files</Filter>
+      <Filter>Source\Engine\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="stb.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source\Engine\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Mesh.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source\Engine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Source\Engine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UI.cpp">
+      <Filter>Source\Engine\Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h">
-      <Filter>Header Files</Filter>
+      <Filter>Source\Engine\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Shader.h">
-      <Filter>Header Files</Filter>
+      <Filter>Source\Engine\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="EBO.h">
-      <Filter>Header Files</Filter>
+      <Filter>Source\Engine\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="VBO.h">
-      <Filter>Header Files</Filter>
+      <Filter>Source\Engine\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="VAO.h">
-      <Filter>Header Files</Filter>
+      <Filter>Source\Engine\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Texture.h">
-      <Filter>Header Files</Filter>
+      <Filter>Source\Engine\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="EngineContext.h">
-      <Filter>Header Files</Filter>
+      <Filter>Source\Engine\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="miniaudio.h">
-      <Filter>Header Files</Filter>
+      <Filter>Source\Engine\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Mesh.h">
-      <Filter>Header Files</Filter>
+      <Filter>Source\Engine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Source\Engine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.h">
+      <Filter>Source\Engine\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -88,5 +112,10 @@
     <None Include="default.vert">
       <Filter>Resource Files\Shaders</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\nougatGame\nougatgame\testtexture1.png">
+      <Filter>Resource Files\Textures</Filter>
+    </Image>
   </ItemGroup>
 </Project>

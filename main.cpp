@@ -50,7 +50,7 @@ int main() {
 	float height = 0.1f;
 	float length = 0.1f;
 
-	float r = 0.0f;
+	float r = 1.0f;
 	float g = 0.0f;
 	float b = 0.0f;
 
@@ -71,12 +71,22 @@ int main() {
 
 	Mesh testMesh(planeVertices, planeIndices);
 
+	vector<Texture> textures = {
+		Texture("testtexture1.png", GL_TEXTURE_2D, GL_TEXTURE0)
+	};
+
+	testMesh.setTexture(textures[0]);
+
 
 	while (!glfwWindowShouldClose(window)) {
 
 		glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+		camera.input(window);
+
+		camera.updateMatrix(90.0f, 0.1f, 100.0f);
 
 		testMesh.draw(shaderProgram, camera, glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(1.0f));
 

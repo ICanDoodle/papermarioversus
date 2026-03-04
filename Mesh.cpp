@@ -1,5 +1,6 @@
 #include "Mesh.h"
 
+
 Mesh::Mesh(vector <Vertex>& vertices, vector <GLuint>& indices) {
 
 	Mesh::vertices = vertices;
@@ -21,6 +22,17 @@ Mesh::Mesh(vector <Vertex>& vertices, vector <GLuint>& indices) {
 
 }
 
+void Mesh::setTexture(Texture texture)
+{
+	if (Mesh::texture.empty()) {
+		Mesh::texture.push_back(texture);
+	}
+	else {
+		Mesh::texture[0] = texture;
+	}
+	
+}
+
 void Mesh::draw(Shader& shader, Camera& camera, glm::vec3 position, glm::vec3 scale)
 {
 
@@ -34,7 +46,11 @@ void Mesh::draw(Shader& shader, Camera& camera, glm::vec3 position, glm::vec3 sc
 	model = glm::translate(model, position);
 	model = glm::scale(model, scale);
 
-	glUniform1i(glGetUniformLocation(shader.ID, "useTexture"), false);
+	glUniform1i(glGetUniformLocation(shader.ID, "useTexture"), true);
+
+	if (!texture.empty()) {
+		texture[0].Bind();
+	}
 
 	// gets the position of the camera
 	glUniform3f(glGetUniformLocation(shader.ID, "cameraPosition"), camera.position.x, camera.position.y, camera.position.z);

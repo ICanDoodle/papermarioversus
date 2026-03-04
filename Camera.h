@@ -17,7 +17,7 @@ class Camera
 public:
 
 	glm::vec3 position;
-	glm::vec3 orientation;
+	glm::vec3 orientation = glm::vec3(0.0f, 0.0f, -1.0f);
 	glm::vec3 height = glm::vec3(0.0f, 1.0f, 0.0f);
 
 	glm::mat4 cameraMatrix = glm::mat4(1.0f);
@@ -29,6 +29,8 @@ public:
 	void setMatrix(Shader& shader, const char* uniform);
 
 	void updateMatrix(float FOV, float near, float far);
+
+	void input(GLFWwindow* window);
 };
 
 #endif

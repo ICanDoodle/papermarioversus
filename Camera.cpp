@@ -26,3 +26,13 @@ void Camera::updateMatrix(float FOV, float, float)
 	cameraMatrix = projection * view;
 
 }
+
+void Camera::input(GLFWwindow* window)
+{
+	if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) {
+		position.x -= 0.1f;
+	}
+	else if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) {
+		position.x += 0.1f;
+	}
+}

@@ -21,13 +21,15 @@ public:
 
 	vector <Vertex> vertices;
 	vector <GLuint> indices;
-	vector <Texture> textures;
+	vector <Texture> texture;
 
 	VAO VAO;
 
 	glm::mat4 model = glm::mat4(1.0f);
 
 	Mesh(vector <Vertex>& vertices, vector <GLuint>& indices);
+
+	void setTexture(Texture texture);
 
 	void draw(Shader& shader, Camera& camera, glm::vec3 position, glm::vec3 scale);
 };
